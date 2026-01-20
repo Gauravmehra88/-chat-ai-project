@@ -1,10 +1,14 @@
-import 'dotenv/config';
+import dotenv from "dotenv";
+dotenv.config();
+
 import http from 'http';
 import app from './app.js';
 import { Server } from 'socket.io';
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 import projectModel from './models/project.model.js';
+
+
 import { generateResult } from './services/ai.service.js';
 
 const port = process.env.PORT || 3000;
